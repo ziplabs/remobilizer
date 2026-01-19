@@ -2,21 +2,21 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Contact",
-  description: "Connect with Remobilizer to compare notes or share ideas.",
+  description: "Connect with Remobilizer to compare notes on hard decisions.",
 };
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#f9f8f5]">
+    <div className="bg-[#f6f5f1]">
       <section className="border-b border-neutral-200/70 bg-white">
         <div className="mx-auto w-full max-w-4xl px-6 py-16">
           <h1 className="text-4xl font-semibold text-neutral-950 sm:text-5xl">
             Contact
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600">
-            If you are working through a complex AI-era decision, we are happy
-            to compare notes and share patterns we are seeing across the
-            enterprise landscape.
+            If you are working through a complex AI-era decision, we can compare
+            notes and share patterns we are seeing across the enterprise
+            landscape.
           </p>
         </div>
       </section>
@@ -35,8 +35,8 @@ export default function ContactPage() {
               .
             </p>
             <p className="mt-3 text-sm text-neutral-500">
-              We respond to relevant executive inquiries and thoughtful
-              perspectives.
+              We respond to relevant executive inquiries and specific decision
+              contexts.
             </p>
             <Link
               href="/insights"

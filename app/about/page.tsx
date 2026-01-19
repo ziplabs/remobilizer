@@ -1,19 +1,19 @@
 export const metadata = {
   title: "About",
-  description: "What Remobilizer is and the editorial intent behind it.",
+  description: "Why Remobilizer exists and the discipline it serves.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#f9f8f5]">
+    <div className="bg-[#f6f5f1]">
       <section className="border-b border-neutral-200/70 bg-white">
         <div className="mx-auto w-full max-w-4xl px-6 py-16">
           <h1 className="text-4xl font-semibold text-neutral-950 sm:text-5xl">
             About Remobilizer
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600">
-            Remobilizer is an operator-grade publishing platform for senior
-            leaders navigating AI-era strategy, execution, and risk.
+            Remobilizer is a publishing platform for leaders accountable for
+            enterprise outcomes in the AI era.
           </p>
         </div>
       </section>
@@ -22,21 +22,19 @@ export default function AboutPage() {
         <div className="mx-auto w-full max-w-4xl px-6 py-14">
           <div className="flex flex-col gap-6 text-base leading-relaxed text-neutral-700">
             <p>
-              We write for executives who are accountable for outcomes, not just
-              analysis. Each Insight is built to surface tradeoffs, failure
-              patterns, and questions worth debating in the boardroom or the
-              leadership team.
+              This site is written for executives who carry the decision, not
+              the commentary. Each Insight is designed to surface tradeoffs,
+              failure modes, and the questions that matter before a commitment
+              is made.
             </p>
             <p>
-              The tone is intentionally calm and precise. We avoid frameworks
-              that ask readers to learn new vocabulary before the content is
-              useful. The goal is clarity, not spectacle.
+              We avoid frameworks and prescriptive posture. The goal is clarity
+              under uncertainty, not reassurance.
             </p>
             <p>
               Remobilizer is not a research archive or a consulting library. It
-              exists to publish a small number of high-quality essays that help
-              leaders make better decisions in complex, rapidly shifting
-              enterprise contexts.
+              is a disciplined stream of essays meant to stand up in the
+              boardroom.
             </p>
           </div>
         </div>

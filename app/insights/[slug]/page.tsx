@@ -35,7 +35,7 @@ export default function InsightPage({ params }: InsightPageProps) {
   }
 
   return (
-    <div className="bg-[#f9f8f5]">
+    <div className="bg-[#f6f5f1]">
       <section className="border-b border-neutral-200/70 bg-white">
         <div className="mx-auto w-full max-w-3xl px-6 py-16">
           <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-500">
@@ -92,7 +92,7 @@ export default function InsightPage({ params }: InsightPageProps) {
           </div>
 
           {insight.cta && (
-            <div className="mt-12 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+            <div className="mt-12 border-l-4 border-neutral-900 bg-neutral-50 px-6 py-6">
               <p className="text-base text-neutral-700">{insight.cta.text}</p>
               <Link
                 href={insight.cta.href}
