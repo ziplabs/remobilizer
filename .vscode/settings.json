@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "**/remobilizer-archive": true
+  },
+  "files.watcherExclude": {
+    "**/remobilizer-archive/**": true
+  },
+  "search.exclude": {
+    "**/remobilizer-archive": true
+  }
+}

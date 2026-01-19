@@ -1,7 +1,8 @@
 {
-  "name": "remobilizer_tmp",
+  "name": "remobilizer",
   "version": "0.1.0",
   "private": true,
+  "description": "Executive-grade publishing platform for AI-era leadership insights.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
