@@ -16,13 +16,13 @@ export default function SiteFooter() {
             <p className="text-xs">© {new Date().getFullYear()} Remobilizer</p>
           </div>
           <div className="flex flex-col gap-3 text-sm font-semibold text-[color:var(--accent-charcoal)]">
-            <Link href="/insights" className="hover:text-[color:var(--accent-blue)]">
+            <Link href="/insights" className="hover:text-[color:var(--accent-olive)]">
               Insights
             </Link>
-            <Link href="/about" className="hover:text-[color:var(--accent-blue)]">
+            <Link href="/about" className="hover:text-[color:var(--accent-olive)]">
               About
             </Link>
-            <Link href="/contact" className="hover:text-[color:var(--accent-blue)]">
+            <Link href="/contact" className="hover:text-[color:var(--accent-olive)]">
               Contact
             </Link>
           </div>

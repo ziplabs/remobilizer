@@ -31,7 +31,7 @@ export default function InsightsPage() {
               <Link
                 key={insight.slug}
                 href={`/insights/${insight.slug}`}
-                className="group block rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.35)] transition hover:-translate-y-1 hover:border-[color:var(--accent-blue)]"
+                className="group block rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.35)] transition hover:-translate-y-1 hover:border-[color:var(--accent-olive)]"
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">

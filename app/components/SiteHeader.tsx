@@ -21,7 +21,7 @@ export default function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-neutral-950"
+              className="transition-colors hover:text-[color:var(--accent-olive)]"
             >
               {item.label}
             </Link>

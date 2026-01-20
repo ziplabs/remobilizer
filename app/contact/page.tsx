@@ -29,7 +29,7 @@ export default function ContactPage() {
                 Reach out at{" "}
                 <a
                   href="mailto:contact@remobilizer.com"
-                  className="font-semibold text-[color:var(--accent-blue)] hover:text-[color:var(--accent-charcoal)]"
+                  className="font-semibold text-[color:var(--accent-blue)] hover:text-[color:var(--accent-olive)]"
                 >
                   contact@remobilizer.com
                 </a>
