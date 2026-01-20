@@ -134,30 +134,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto w-full max-w-6xl px-6 py-20">
-          <div className="grid gap-10 border-t border-[color:var(--line)] bg-[color:var(--surface)] px-8 py-12 shadow-[0_20px_45px_-45px_rgba(15,23,42,0.35)] md:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-                A place for decisions, not declarations.
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-                Remobilizer exists for leaders who carry accountability. The
-                work is to document what breaks, what holds, and what deserves
-                debate before a commitment is made.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4 text-sm font-semibold text-[color:var(--accent-charcoal)]">
-              <Link href="/about" className="hover:text-[color:var(--accent-blue)]">
-                About Remobilizer
-              </Link>
-              <Link href="/contact" className="hover:text-[color:var(--accent-blue)]">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
