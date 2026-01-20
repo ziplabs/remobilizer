@@ -11,7 +11,8 @@ export default function SiteFooter() {
             </p>
             <p>
               Essays on AI, enterprise software, and the decisions that shape
-              outcomes. Written for leaders who carry accountability.
+              outcomes. Written for leaders responsible for direction and
+              execution.
             </p>
             <p className="text-xs">© {new Date().getFullYear()} Remobilizer</p>
           </div>

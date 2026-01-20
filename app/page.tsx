@@ -22,8 +22,8 @@ export default function Home() {
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--muted)]">
               <p>
                 Remobilizer publishes essays on AI, enterprise software, and
-                security with an emphasis on tradeoffs, execution pressure, and
-                the realities leaders sign their names to.
+                security with an emphasis on how choices play out in real
+                organizations.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -94,23 +94,22 @@ export default function Home() {
                 What we cover
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
-                Tradeoffs, hard decisions, and technology shifts that define
-                enterprise outcomes across AI, enterprise software, security,
-                and operating models.
+                Hard decisions, technology shifts, and execution realities that
+                shape enterprise outcomes across AI, enterprise software,
+                security, and operating models.
               </p>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
-                We focus on the moments where strategy meets execution: platform
-                choices that determine optionality, governance decisions that
-                shift delivery speed, and product bets that carry asymmetric
-                downside.
+                We focus on where strategy meets execution: platform choices,
+                governance decisions, and product bets that determine how
+                outcomes unfold.
               </p>
               <div className="grid gap-2 text-sm text-[color:var(--muted)]">
                 <span>Strategy ↔ execution</span>
-                <span>Risk, control, and accountability</span>
+                <span>Risk, control, and ownership</span>
                 <span>Platform architecture and operating model</span>
-                <span>Product, GTM, and enterprise adoption pressure</span>
+                <span>Product, GTM, and enterprise adoption dynamics</span>
               </div>
               <div>
                 <a
@@ -148,7 +147,7 @@ export default function Home() {
                   "Accountability, lineage, and override paths that hold up under scrutiny.",
               },
               {
-                title: "Inference cost pressure",
+                title: "Inference cost dynamics",
                 description:
                   "Where spend accumulates and how leaders manage the curve.",
               },
@@ -160,7 +159,7 @@ export default function Home() {
               {
                 title: "Data access vs. privacy",
                 description:
-                  "What breaks when policy meets product timelines and regulatory pressure.",
+                  "What shifts when policy meets product timelines and regulatory scrutiny.",
               },
               {
                 title: "M&A integration of AI stacks",

@@ -11,10 +11,10 @@ export default function CoveragePage() {
           <h1 className="text-4xl font-semibold text-[color:var(--accent-blue)] sm:text-5xl">
             Coverage
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[color:var(--muted)]">
-            Remobilizer examines decisions that shape enterprise outcomes in the
-            AI era.
-          </p>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[color:var(--muted)]">
+              Remobilizer examines decisions that shape enterprise outcomes in
+              the AI era.
+            </p>
         </div>
       </section>
 
@@ -23,15 +23,14 @@ export default function CoveragePage() {
           <div className="grid gap-10 border-t border-[color:var(--line)] pt-10">
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
-                The focus is on tradeoffs and decision pressure: where platform
-                strategy meets procurement reality, where security review shapes
-                delivery speed, and where product commitments collide with data
-                constraints.
+                We look at how enterprise leaders navigate complexity: platform
+                choices, governance paths, and product commitments that shape
+                outcomes over time.
               </p>
               <p>
                 We do not publish frameworks or playbooks. We document how
-                leaders weigh optionality, risk, and accountability when the
-                answer is not obvious and the consequences are measurable.
+                leaders approach choices, constraints, and uncertainty when the
+                answer is not obvious.
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
@@ -52,12 +51,12 @@ export default function CoveragePage() {
                     "Inference spend, tooling sprawl, and the true cost of speed.",
                 },
                 {
-                  title: "Operating model and accountability",
+                  title: "Operating model and ownership",
                   detail:
                     "Who owns decisions, how incentives align, and where friction accumulates.",
                 },
                 {
-                  title: "Product, GTM, and adoption pressure",
+                  title: "Product, GTM, and adoption dynamics",
                   detail:
                     "Execution risk when customer timelines outpace platform readiness.",
                 },
@@ -81,8 +80,8 @@ export default function CoveragePage() {
               ))}
             </div>
             <p className="text-sm text-[color:var(--muted)]">
-              Coverage shifts with the market. Essays are selected for relevance
-              to enterprise leadership decisions, not for topical breadth.
+              Coverage evolves with the market and the decisions leaders are
+              facing.
             </p>
           </div>
         </div>

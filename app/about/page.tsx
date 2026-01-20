@@ -24,9 +24,9 @@ export default function AboutPage() {
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
                 This site is written for leaders who carry the decision, not the
-                commentary. Each Insight is designed to surface tradeoffs,
-                failure modes, and the questions that matter before a commitment
-                is made.
+                commentary. Each Insight is designed to surface constraints,
+                second-order effects, and the questions that matter before a
+                commitment is made.
               </p>
               <p className="text-[color:var(--muted)]">
                 The purpose is clarity under uncertainty. We focus on what

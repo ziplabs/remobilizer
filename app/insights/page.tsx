@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/format";
 
 export const metadata = {
   title: "Insights",
-  description: "Essays on AI, enterprise software, and decision-making under pressure.",
+  description: "Essays on AI, enterprise software, and enterprise decisions.",
 };
 
 export default function InsightsPage() {
