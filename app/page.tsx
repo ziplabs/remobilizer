@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <Link
               href={`/insights/${featured.slug}`}
-              className="group block border-l-4 border-[color:var(--accent-blue)] bg-[color:var(--surface)] px-8 py-10 shadow-[0_30px_60px_-50px_rgba(11,35,64,0.35)] transition hover:-translate-y-1"
+              className="group block rounded-3xl border border-[color:var(--line)] bg-[color:var(--surface)] p-10 shadow-[0_22px_50px_-38px_rgba(11,35,64,0.4)] transition hover:-translate-y-1 hover:border-[color:var(--accent-blue)]"
             >
               <div className="flex flex-col gap-5">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
@@ -124,13 +124,51 @@ export default function Home() {
               Representative topics drawn from current enterprise realities.
             </p>
           </div>
-          <div className="grid gap-6 border-l-4 border-[color:var(--accent-olive)] bg-[color:var(--surface)] px-6 py-8 text-[color:var(--accent-charcoal)]">
-            <p className="text-base leading-relaxed text-[color:var(--accent-charcoal)]">
-              AI vendor consolidation, model risk governance, inference cost
-              pressure, data access versus privacy constraints, security review
-              bottlenecks, product and platform ownership, and M&A integration of
-              AI stacks — among others.
-            </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              {
+                title: "AI vendor consolidation",
+                description:
+                  "How procurement leverage, platform velocity, and lock-in risk shape the choice.",
+              },
+              {
+                title: "Model risk governance",
+                description:
+                  "Accountability, lineage, and override paths that hold up under scrutiny.",
+              },
+              {
+                title: "Inference cost pressure",
+                description:
+                  "Where spend accumulates and how leaders manage the curve.",
+              },
+              {
+                title: "Security review bottlenecks",
+                description:
+                  "Why AI delivery slows and how teams remove friction without exposure.",
+              },
+              {
+                title: "Data access vs. privacy",
+                description:
+                  "What breaks when policy meets product timelines and regulatory pressure.",
+              },
+              {
+                title: "M&A integration of AI stacks",
+                description:
+                  "Duplicated platforms, fractured governance, and the cost of drift.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.35)] transition hover:-translate-y-1 hover:border-[color:var(--accent-olive)]"
+              >
+                <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

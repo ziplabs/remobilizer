@@ -26,12 +26,12 @@ export default function InsightsPage() {
 
       <section>
         <div className="mx-auto w-full max-w-6xl px-6 py-16">
-          <div className="divide-y divide-[color:var(--line)] border-t border-[color:var(--line)] bg-[color:var(--surface)]">
+          <div className="grid gap-6 md:grid-cols-2">
             {insights.map((insight) => (
               <Link
                 key={insight.slug}
                 href={`/insights/${insight.slug}`}
-                className="group block px-6 py-10 transition hover:bg-[color:var(--background)]"
+                className="group block rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.35)] transition hover:-translate-y-1 hover:border-[color:var(--accent-blue)]"
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
