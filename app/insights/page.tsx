@@ -36,7 +36,7 @@ export default function InsightsPage() {
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
                     <span>{formatDate(insight.date)}</span>
-                    <span className="h-1 w-1 rounded-full bg-[color:var(--line)]" />
+                    <span className="h-1 w-1 rounded-full bg-[color:var(--accent-olive)]" />
                     <span>{insight.tags.join(" · ")}</span>
                   </div>
                   <h2 className="text-2xl font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">

@@ -6,7 +6,7 @@ export default function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
         <div className="grid gap-8 border-t border-[color:var(--line)] pt-10 md:grid-cols-[1.4fr_0.6fr]">
           <div className="space-y-4 text-sm text-[color:var(--muted)]">
-            <p className="text-base font-semibold text-[color:var(--accent-charcoal)]">
+            <p className="text-base font-semibold text-[color:var(--accent-blue)]">
               Remobilizer
             </p>
             <p>
