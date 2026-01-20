@@ -8,15 +8,15 @@ const navItems = [
 
 export default function SiteHeader() {
   return (
-    <header className="border-b border-neutral-200/70 bg-white">
+    <header className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-6">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-neutral-950"
+          className="text-lg font-semibold tracking-tight text-[color:var(--accent-blue)]"
         >
           Remobilizer
         </Link>
-        <nav className="flex flex-wrap items-center gap-6 text-sm font-medium text-neutral-700">
+        <nav className="flex flex-wrap items-center gap-6 text-sm font-medium text-[color:var(--accent-charcoal)]">
           {navItems.map((item) => (
             <Link
               key={item.href}

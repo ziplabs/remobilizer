@@ -35,32 +35,32 @@ export default function InsightPage({ params }: InsightPageProps) {
   }
 
   return (
-    <div className="bg-[#f6f5f1]">
-      <section className="border-b border-neutral-200/70 bg-white">
+    <div className="bg-[color:var(--background)]">
+      <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-3xl px-6 py-16">
-          <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-500">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
             <span>{formatDate(insight.date)}</span>
-            <span className="h-1 w-1 rounded-full bg-neutral-300" />
+            <span className="h-1 w-1 rounded-full bg-[color:var(--line)]" />
             <span>{insight.tags.join(" · ")}</span>
           </div>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight text-neutral-950 sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-semibold leading-tight text-[color:var(--accent-blue)] sm:text-5xl">
             {insight.title}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-neutral-600">
+          <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">
             {insight.description}
           </p>
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-3xl px-6 py-14">
-          <div className="flex flex-col gap-6 text-neutral-700">
+          <div className="flex flex-col gap-6 text-[color:var(--accent-charcoal)]">
             {insight.blocks.map((block, index) => {
               if (block.type === "heading") {
                 return (
                   <h2
                     key={`${block.text}-${index}`}
-                    className="mt-6 text-2xl font-semibold text-neutral-900"
+                    className="mt-6 text-2xl font-semibold text-[color:var(--accent-charcoal)]"
                   >
                     {block.text}
                   </h2>
@@ -83,7 +83,7 @@ export default function InsightPage({ params }: InsightPageProps) {
               return (
                 <p
                   key={`${block.text}-${index}`}
-                  className="text-base leading-relaxed"
+                  className="text-base leading-relaxed text-[color:var(--accent-charcoal)]"
                 >
                   {block.text}
                 </p>
@@ -92,13 +92,15 @@ export default function InsightPage({ params }: InsightPageProps) {
           </div>
 
           {insight.cta && (
-            <div className="mt-12 border-l-4 border-neutral-900 bg-neutral-50 px-6 py-6">
-              <p className="text-base text-neutral-700">{insight.cta.text}</p>
+            <div className="mt-12 border-l-4 border-[color:var(--accent-olive)] bg-[color:var(--background)] px-6 py-6">
+              <p className="text-base text-[color:var(--accent-charcoal)]">
+                {insight.cta.text}
+              </p>
               <Link
                 href={insight.cta.href}
-                className="mt-4 inline-flex text-sm font-semibold text-neutral-700 hover:text-neutral-950"
+                className="mt-4 inline-flex text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
               >
-                Contact Remobilizer
+                Contact
               </Link>
             </div>
           )}

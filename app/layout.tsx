@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Remobilizer",
   },
   description:
-    "Executive-grade essays on strategy, execution, and risk in the AI era.",
+    "Essays on AI, enterprise software, and the decisions that shape outcomes.",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${newsreader.variable} bg-[#f9f8f5] text-neutral-950 antialiased`}
+        className={`${inter.variable} ${newsreader.variable} bg-[color:var(--background)] text-[color:var(--foreground)] antialiased`}
       >
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
