@@ -15,7 +15,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-plex-serif);
+  --font-display: var(--font-display);
 }
 
 *,
@@ -35,8 +35,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-plex-serif), "Times New Roman", serif;
-  letter-spacing: -0.015em;
+  font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 p {

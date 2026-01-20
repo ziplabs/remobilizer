@@ -2,39 +2,6 @@ import Link from "next/link";
 import { getAllInsights } from "@/lib/insights";
 import { formatDate } from "@/lib/format";
 
-const focusAreas = [
-  {
-    title: "AI vendor consolidation vs. optionality",
-    description:
-      "How procurement leverage, platform velocity, and lock-in risk shape the choice.",
-  },
-  {
-    title: "Model risk governance and auditability",
-    description:
-      "Accountability, lineage, and override paths that hold up under scrutiny.",
-  },
-  {
-    title: "Inference cost and unit economics",
-    description:
-      "Where spend actually accumulates and how leaders manage the curve.",
-  },
-  {
-    title: "Security review bottlenecks",
-    description:
-      "Why AI delivery slows and how teams remove friction without exposure.",
-  },
-  {
-    title: "Data access versus privacy constraints",
-    description:
-      "What breaks when policy meets product timelines and regulatory pressure.",
-  },
-  {
-    title: "M&A integration of AI stacks",
-    description:
-      "Duplicated platforms, fractured governance, and the cost of drift.",
-  },
-];
-
 export default function Home() {
   const [featured] = getAllInsights();
 
@@ -123,22 +90,23 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
               <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-                What we publish
+                What we cover
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
-                Essays on enterprise decisions where incentives collide, risk is
-                asymmetric, and the cost of delay is measurable.
+                We cover tradeoffs, hard decisions, and technology shifts that
+                shape outcomes across AI, enterprise software, security, and
+                operating models.
               </p>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
-                No frameworks. No platitudes. No default posture. We document
-                tradeoffs, failure modes, and the consequences leaders absorb
-                when the decision is theirs to sign.
+                The intent is to surface insights that help leaders navigate
+                uncertainty, choose where to standardize versus experiment, and
+                avoid avoidable failure patterns.
               </p>
               <p className="text-[color:var(--muted)]">
-                The scope is intentionally broad. Coverage rotates with what is
-                most pressing, not a fixed list of topics.
+                Coverage is intentionally broad and rotates with what matters
+                most, not a fixed set of themes.
               </p>
             </div>
           </div>
@@ -147,29 +115,22 @@ export default function Home() {
 
       <section className="border-b border-[color:var(--line)] bg-[color:var(--background)]">
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
-          <div className="mb-10 flex flex-col gap-3">
+          <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-              Current focus areas
+              Examples of what we examine
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-              Representative lines of inquiry. The list evolves as priorities
-              shift across enterprise leaders.
+              These are representative topics, not boundaries. The agenda shifts
+              as the enterprise landscape shifts.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            {focusAreas.map((item) => (
-              <div
-                key={item.title}
-                className="border-l-4 border-[color:var(--accent-olive)] bg-[color:var(--surface)] px-6 py-5"
-              >
-                <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid gap-6 border-l-4 border-[color:var(--accent-olive)] bg-[color:var(--surface)] px-6 py-8 text-[color:var(--accent-charcoal)]">
+            <p className="text-base leading-relaxed text-[color:var(--accent-charcoal)]">
+              AI vendor consolidation, model risk governance, inference cost
+              pressure, data access versus privacy constraints, security review
+              bottlenecks, product and platform ownership, and M&A integration of
+              AI stacks — among others.
+            </p>
           </div>
         </div>
       </section>
