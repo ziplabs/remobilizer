@@ -35,7 +35,7 @@ export default function Home() {
                   href="/contact"
                   className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-700 transition hover:border-neutral-400 hover:text-neutral-950"
                 >
-                  Contact Remobilizer
+                  Contact
                 </Link>
               </div>
             </div>
@@ -92,10 +92,8 @@ export default function Home() {
                 What we publish
               </h2>
               <p className="mt-4 text-base leading-relaxed text-neutral-600">
-                Essays on real enterprise dynamics: when platform strategy
-                collides with security mandates, when procurement constrains
-                product velocity, when governance slows execution, and when the
-                cost of indecision shows up on the balance sheet.
+                Essays on enterprise decisions where incentives collide, risk is
+                asymmetric, and the cost of delay is measurable.
               </p>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-neutral-700">
@@ -105,10 +103,41 @@ export default function Home() {
                 when the decision is theirs to sign.
               </p>
               <p>
-                This is not designed for casual consumption. It is written for
-                executives who need clarity before they move.
+                The scope is intentionally broad. Coverage rotates with what is
+                most pressing, not a fixed list of topics.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-neutral-200/70 bg-[#f6f5f1]">
+        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mb-10 flex flex-col gap-3">
+            <h2 className="text-3xl font-semibold text-neutral-950">
+              Current focus areas
+            </h2>
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-600">
+              These are current lines of inquiry. The list evolves as the
+              enterprise landscape shifts.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              "AI vendor consolidation vs. optionality",
+              "Model risk governance and auditability",
+              "AI platform cost anatomy and chargeback",
+              "Security review bottlenecks in AI delivery",
+              "Data access versus privacy constraints",
+              "M&A integration of AI stacks",
+            ].map((item) => (
+              <div
+                key={item}
+                className="border-l-4 border-neutral-900 bg-white px-6 py-5 text-sm font-semibold text-neutral-700"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -131,7 +160,7 @@ export default function Home() {
                 Why Remobilizer exists
               </Link>
               <Link href="/contact" className="hover:text-neutral-950">
-                Compare notes with Remobilizer
+                Contact
               </Link>
             </div>
           </div>

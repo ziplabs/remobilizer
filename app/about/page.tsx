@@ -12,8 +12,8 @@ export default function AboutPage() {
             About Remobilizer
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600">
-            Remobilizer is a publishing platform for leaders accountable for
-            enterprise outcomes in the AI era.
+            Remobilizer is a publishing platform focused on enterprise
+            decisions in the AI era.
           </p>
         </div>
       </section>
@@ -22,10 +22,9 @@ export default function AboutPage() {
         <div className="mx-auto w-full max-w-4xl px-6 py-14">
           <div className="flex flex-col gap-6 text-base leading-relaxed text-neutral-700">
             <p>
-              This site is written for executives who carry the decision, not
-              the commentary. Each Insight is designed to surface tradeoffs,
-              failure modes, and the questions that matter before a commitment
-              is made.
+              This site is written for leaders who carry the decision, not the
+              commentary. Each Insight is designed to surface tradeoffs, failure
+              modes, and the questions that matter before a commitment is made.
             </p>
             <p>
               We avoid frameworks and prescriptive posture. The goal is clarity
@@ -33,8 +32,8 @@ export default function AboutPage() {
             </p>
             <p>
               Remobilizer is not a research archive or a consulting library. It
-              is a disciplined stream of essays meant to stand up in the
-              boardroom.
+              is a disciplined stream of essays meant to stand up in the room
+              where decisions are made.
             </p>
           </div>
         </div>
