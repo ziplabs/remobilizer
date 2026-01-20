@@ -94,21 +94,24 @@ export default function Home() {
                 What we cover
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
-                Tradeoffs, hard decisions, and technology shifts that shape
-                outcomes across AI, enterprise software, security, and
-                operating models.
+                Tradeoffs, hard decisions, and technology shifts that define
+                enterprise outcomes across AI, enterprise software, security,
+                and operating models.
               </p>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
-                The intent is to surface insights that help leaders navigate
-                uncertainty, choose where to standardize versus experiment, and
-                avoid avoidable failure patterns.
+                We focus on the moments where strategy meets execution: platform
+                choices that determine optionality, governance decisions that
+                shift delivery speed, and product bets that carry asymmetric
+                downside.
               </p>
-              <p className="text-[color:var(--muted)]">
-                Coverage is intentionally broad and rotates with what matters
-                most, not a fixed set of themes.
-              </p>
+              <div className="grid gap-2 text-sm text-[color:var(--muted)]">
+                <span>Strategy ↔ execution</span>
+                <span>Risk, control, and accountability</span>
+                <span>Platform architecture and operating model</span>
+                <span>Product, GTM, and enterprise adoption pressure</span>
+              </div>
             </div>
           </div>
         </div>
