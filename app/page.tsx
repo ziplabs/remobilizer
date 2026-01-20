@@ -112,6 +112,14 @@ export default function Home() {
                 <span>Platform architecture and operating model</span>
                 <span>Product, GTM, and enterprise adoption pressure</span>
               </div>
+              <div>
+                <a
+                  href="/coverage"
+                  className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
+                >
+                  Read the coverage overview
+                </a>
+              </div>
             </div>
           </div>
         </div>
