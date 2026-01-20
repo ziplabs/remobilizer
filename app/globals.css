@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbfaf7;
+  --background: #f8f6f0;
   --foreground: #101827;
   --surface: #ffffff;
-  --muted: #5b6474;
-  --line: #e5e1d8;
-  --accent-blue: #0b1d3a;
-  --accent-olive: #6b7a4e;
+  --muted: #5a6473;
+  --line: #e2dccf;
+  --accent-blue: #0c2340;
+  --accent-olive: #6f7b4b;
   --accent-charcoal: #1f2937;
 }
 
@@ -15,7 +15,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-newsreader);
+  --font-serif: var(--font-plex-serif);
 }
 
 *,
@@ -35,8 +35,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-newsreader), "Times New Roman", serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-plex-serif), "Times New Roman", serif;
+  letter-spacing: -0.015em;
 }
 
 p {
@@ -49,5 +49,5 @@ a {
 }
 
 ::selection {
-  background: #e6d8b8;
+  background: #e7dbc2;
 }

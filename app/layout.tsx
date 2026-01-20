@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteHeader from "@/app/components/SiteHeader";
@@ -9,9 +9,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
+const plexSerif = IBM_Plex_Serif({
+  variable: "--font-plex-serif",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${newsreader.variable} bg-[color:var(--background)] text-[color:var(--foreground)] antialiased`}
+        className={`${inter.variable} ${plexSerif.variable} bg-[color:var(--background)] text-[color:var(--foreground)] antialiased`}
       >
         <div className="flex min-h-screen flex-col">
           <SiteHeader />

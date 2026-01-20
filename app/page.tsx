@@ -44,7 +44,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-24">
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div className="space-y-8">
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--muted)]">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent-olive)]">
                 Remobilizer Insights
               </span>
               <h1 className="text-4xl font-semibold leading-tight text-[color:var(--accent-blue)] sm:text-6xl">
@@ -67,7 +67,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="rounded-full border border-[color:var(--line)] px-6 py-3 text-sm font-semibold text-[color:var(--accent-charcoal)] transition hover:border-[color:var(--accent-charcoal)]"
+                  className="rounded-full border border-[color:var(--accent-olive)] px-6 py-3 text-sm font-semibold text-[color:var(--accent-olive)] transition hover:border-[color:var(--accent-blue)] hover:text-[color:var(--accent-blue)]"
                 >
                   Contact
                 </Link>
@@ -82,7 +82,7 @@ export default function Home() {
           <div className="mx-auto w-full max-w-6xl px-6 py-20">
             <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h2 className="text-3xl font-semibold text-[color:var(--accent-charcoal)]">
+                <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
                   Featured Insight
                 </h2>
                 <p className="mt-2 text-[color:var(--muted)]">
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <Link
               href={`/insights/${featured.slug}`}
-              className="group block border-l-4 border-[color:var(--accent-blue)] bg-[color:var(--surface)] px-8 py-10 shadow-[0_30px_60px_-50px_rgba(11,29,58,0.35)] transition hover:-translate-y-1"
+              className="group block border-l-4 border-[color:var(--accent-blue)] bg-[color:var(--surface)] px-8 py-10 shadow-[0_30px_60px_-50px_rgba(11,35,64,0.35)] transition hover:-translate-y-1"
             >
               <div className="flex flex-col gap-5">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-20">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <h2 className="text-3xl font-semibold text-[color:var(--accent-charcoal)]">
+              <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
                 What we publish
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
@@ -148,7 +148,7 @@ export default function Home() {
       <section className="border-b border-[color:var(--line)] bg-[color:var(--background)]">
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
           <div className="mb-10 flex flex-col gap-3">
-            <h2 className="text-3xl font-semibold text-[color:var(--accent-charcoal)]">
+            <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
               Current focus areas
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
@@ -178,7 +178,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-20">
           <div className="grid gap-10 border-t border-[color:var(--line)] pt-12 md:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <h2 className="text-3xl font-semibold text-[color:var(--accent-charcoal)]">
+              <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
                 A place for decisions, not declarations.
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
