@@ -93,8 +93,8 @@ export default function Home() {
                 What we cover
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
-                We cover tradeoffs, hard decisions, and technology shifts that
-                shape outcomes across AI, enterprise software, security, and
+                Tradeoffs, hard decisions, and technology shifts that shape
+                outcomes across AI, enterprise software, security, and
                 operating models.
               </p>
             </div>
@@ -117,11 +117,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
           <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-              Examples of what we examine
+              Recent topics include
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-              These are representative topics, not boundaries. The agenda shifts
-              as the enterprise landscape shifts.
+              Representative topics drawn from current enterprise realities.
             </p>
           </div>
           <div className="grid gap-6 border-l-4 border-[color:var(--accent-olive)] bg-[color:var(--surface)] px-6 py-8 text-[color:var(--accent-charcoal)]">
@@ -137,7 +136,7 @@ export default function Home() {
 
       <section>
         <div className="mx-auto w-full max-w-6xl px-6 py-20">
-          <div className="grid gap-10 border-t border-[color:var(--line)] pt-12 md:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-10 border-t border-[color:var(--line)] bg-[color:var(--surface)] px-8 py-12 shadow-[0_20px_45px_-45px_rgba(15,23,42,0.35)] md:grid-cols-[1.1fr_0.9fr]">
             <div>
               <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
                 A place for decisions, not declarations.
