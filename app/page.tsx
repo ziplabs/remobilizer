@@ -29,6 +29,7 @@ export default function Home() {
                 <Link
                   href="/insights"
                   className="rounded-full bg-[color:var(--accent-blue)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[color:var(--accent-charcoal)] hover:text-white"
+                  style={{ color: "#ffffff" }}
                 >
                   Read the latest insights
                 </Link>
