@@ -31,7 +31,7 @@ export default function Home() {
                   className="rounded-full bg-[color:var(--accent-blue)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[color:var(--accent-charcoal)] hover:text-white"
                   style={{ color: "#ffffff" }}
                 >
-                  Read the latest insights
+                  Latest insights
                 </Link>
                 <Link
                   href="/contact"
@@ -61,7 +61,7 @@ export default function Home() {
                 href="/insights"
                 className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
               >
-                View all insights
+                See all
               </Link>
             </div>
             <Link
@@ -116,7 +116,7 @@ export default function Home() {
                   href="/coverage"
                   className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
                 >
-                  Read the coverage overview
+                  See more
                 </a>
               </div>
             </div>

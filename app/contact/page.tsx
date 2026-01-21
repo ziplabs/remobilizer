@@ -94,7 +94,7 @@ export default function ContactPage() {
             </form>
             <div className="flex flex-col gap-4 text-sm font-semibold text-[color:var(--accent-charcoal)]">
               <Link href="/insights" className="hover:text-[color:var(--accent-blue)]">
-                Read the latest insights
+                Latest insights
               </Link>
               <Link href="/about" className="hover:text-[color:var(--accent-blue)]">
                 About Remobilizer
