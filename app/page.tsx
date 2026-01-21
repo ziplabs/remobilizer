@@ -91,7 +91,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
               <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-                What we cover
+                Shaping outcomes
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
                 Hard decisions, technology shifts, and execution realities that
@@ -128,7 +128,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
           <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-              Recent topics include
+              Recent lines of inquiry
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
               Representative topics drawn from current enterprise realities.

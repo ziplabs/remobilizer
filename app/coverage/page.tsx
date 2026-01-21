@@ -9,7 +9,7 @@ export default function CoveragePage() {
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16">
           <h1 className="text-4xl font-semibold text-[color:var(--accent-blue)] sm:text-5xl">
-            Coverage
+            How decisions get made
           </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[color:var(--muted)]">
               Remobilizer examines decisions that shape enterprise outcomes in
