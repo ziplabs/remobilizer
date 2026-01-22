@@ -45,6 +45,9 @@ export default async function DecisionPage({ params }: DecisionPageProps) {
     decision.relatedOutcomes
       ?.map((slug) => getOutcomeBySlug(slug))
       .filter((item): item is Outcome => Boolean(item)) ?? [];
+  const sections =
+    decision.sections ??
+    [];
 
   return (
     <div className="bg-[color:var(--background)]">
@@ -65,31 +68,25 @@ export default async function DecisionPage({ params }: DecisionPageProps) {
       <section className="bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14">
           <div className="grid gap-10 border-t border-[color:var(--line)] pt-10">
-            {decision.whatWereSeeing && decision.whatWereSeeing.length > 0 && (
-              <div>
+            {sections.map((section) => (
+              <div key={section.title}>
                 <h2 className="text-lg font-semibold text-[color:var(--accent-charcoal)]">
-                  What we’re seeing
+                  {section.title}
                 </h2>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-[color:var(--muted)]">
-                  {decision.whatWereSeeing.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                {section.body && (
+                  <p className="mt-3 text-base leading-relaxed text-[color:var(--muted)]">
+                    {section.body}
+                  </p>
+                )}
+                {section.bullets && section.bullets.length > 0 && (
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-[color:var(--muted)]">
+                    {section.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            )}
-
-            {decision.whatMakesThisHard && decision.whatMakesThisHard.length > 0 && (
-              <div>
-                <h2 className="text-lg font-semibold text-[color:var(--accent-charcoal)]">
-                  What makes this hard
-                </h2>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-[color:var(--muted)]">
-                  {decision.whatMakesThisHard.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            ))}
 
             {relatedOutcomes.length > 0 && (
               <div>

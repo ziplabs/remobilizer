@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="bg-[color:var(--background)]">
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-24">
+        <div className="mx-auto w-full max-w-6xl px-6 py-28">
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div className="space-y-8">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent-olive)]">
@@ -23,8 +23,8 @@ export default function Home() {
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--muted)]">
               <p>
-                Essays on AI, enterprise software, and security for leaders
-                accountable to enterprise outcomes and the choices behind them.
+                Essays on AI and enterprise software for leaders accountable
+                when platform choices fail.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -48,14 +48,14 @@ export default function Home() {
 
       {featured && (
         <section className="border-b border-[color:var(--line)] bg-[color:var(--background)]">
-          <div className="mx-auto w-full max-w-6xl px-6 py-20">
+          <div className="mx-auto w-full max-w-6xl px-6 py-24">
             <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
                   Featured Insight
                 </h2>
                 <p className="mt-2 text-[color:var(--muted)]">
-                  What we’re thinking about right now.
+                  An essay shaping our current point of view.
                 </p>
               </div>
               <Link
@@ -88,7 +88,7 @@ export default function Home() {
       )}
 
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-20">
+        <div className="mx-auto w-full max-w-6xl px-6 py-24">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
               <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
@@ -111,7 +111,7 @@ export default function Home() {
                     href={`/outcomes/${outcome.slug}`}
                     className="rounded-2xl bg-[color:var(--background)] p-5 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.22)] transition hover:-translate-y-1"
                   >
-                    <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--accent-charcoal)]">
                       {outcome.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       <section className="border-b border-[color:var(--line)] bg-[color:var(--background)]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-24">
           <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
               Decisions
@@ -150,7 +150,7 @@ export default function Home() {
                 href={`/decisions/${decision.slug}`}
                 className="rounded-2xl bg-[color:var(--surface)] p-6 shadow-[0_12px_30px_-24px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_-26px_rgba(15,23,42,0.3)]"
               >
-                <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
+                <h3 className="text-base font-semibold text-[color:var(--accent-charcoal)]">
                   {decision.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">

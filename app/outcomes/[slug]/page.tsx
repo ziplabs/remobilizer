@@ -76,6 +76,19 @@ export default async function OutcomePage({ params }: OutcomePageProps) {
               </div>
             )}
 
+            {outcome.howItShowsUp && outcome.howItShowsUp.length > 0 && (
+              <div>
+                <h2 className="text-lg font-semibold text-[color:var(--accent-charcoal)]">
+                  How this usually shows up
+                </h2>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-[color:var(--muted)]">
+                  {outcome.howItShowsUp.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {outcome.failurePatterns && outcome.failurePatterns.length > 0 && (
               <div>
                 <h2 className="text-lg font-semibold text-[color:var(--accent-charcoal)]">
