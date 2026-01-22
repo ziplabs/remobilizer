@@ -9,8 +9,8 @@ export default function Home() {
 
   return (
     <div className="bg-[color:var(--background)]">
-      <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-28">
+      <section className="hero-texture border-b border-[color:var(--line)] bg-[color:var(--surface)]">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-28">
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div className="space-y-8">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent-olive)]">
