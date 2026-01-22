@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract operational boundary</title>
+  <desc id="desc">An abstract, minimal schematic of overlapping systems with a soft boundary line.</desc>
+  <rect width="960" height="360" fill="none" />
+  <g stroke="#0c2340" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="140" y="80" width="260" height="200" rx="18" stroke-opacity="0.22" />
+    <rect x="300" y="60" width="300" height="240" rx="18" stroke-opacity="0.18" />
+    <rect x="560" y="90" width="260" height="190" rx="18" stroke-opacity="0.22" />
+    <path d="M120 180h720" stroke-opacity="0.16" />
+    <path d="M260 140h120M260 180h160M260 220h100" stroke-opacity="0.22" />
+    <path d="M620 140h120M620 180h160M620 220h100" stroke-opacity="0.22" />
+    <circle cx="480" cy="180" r="16" stroke="#96ad4f" stroke-opacity="0.5" />
+    <circle cx="480" cy="180" r="6" stroke="#96ad4f" stroke-opacity="0.5" />
+  </g>
+</svg>

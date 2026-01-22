@@ -39,11 +39,9 @@ export default async function InsightPage({ params }: InsightPageProps) {
   const diagram =
     slug === "ai-platform-strategy-standardize-vs-best-of-breed"
       ? {
-          src: "/insights/standardize-best-of-breed-a.svg",
-          altSrc: "/insights/standardize-best-of-breed-b.svg",
-          alt: "A tradeoff line showing standardize and best-of-breed with directional cues for governance and velocity and a center node labeled as ongoing tension.",
-          caption:
-            "Enterprises re-open this choice as constraints shift; the center is tension, not resolution.",
+          src: "/insights/operational-boundary.svg",
+          alt: "An abstract schematic of overlapping systems with a faint boundary line.",
+          caption: "Operational decisions live inside shifting boundaries.",
         }
       : null;
 
