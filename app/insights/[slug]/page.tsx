@@ -36,6 +36,17 @@ export default async function InsightPage({ params }: InsightPageProps) {
     notFound();
   }
 
+  const diagram =
+    slug === "ai-platform-strategy-standardize-vs-best-of-breed"
+      ? {
+          src: "/insights/standardize-best-of-breed-a.svg",
+          altSrc: "/insights/standardize-best-of-breed-b.svg",
+          alt: "A tradeoff line showing standardize vs best-of-breed with governance and velocity forces.",
+          caption:
+            "Standardization consolidates control; best-of-breed preserves velocity and modular capability.",
+        }
+      : null;
+
   return (
     <div className="bg-[color:var(--background)]">
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
@@ -51,6 +62,21 @@ export default async function InsightPage({ params }: InsightPageProps) {
           <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">
             {insight.description}
           </p>
+          {diagram && (
+            <figure className="mt-10">
+              <div className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--background)] p-4 sm:p-6">
+                <img
+                  src={diagram.src}
+                  alt={diagram.alt}
+                  className="h-auto w-full"
+                  loading="eager"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-[color:var(--muted)]">
+                {diagram.caption}
+              </figcaption>
+            </figure>
+          )}
         </div>
       </section>
 
