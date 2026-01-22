@@ -1,20 +1,22 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/format";
+import { getAllInsights } from "@/lib/insights";
 import { getDecisionBySlug, type Decision } from "@/lib/decisions";
 import { getOutcomeBySlug, getInsightsByOutcome, outcomes } from "@/lib/outcomes";
 
 type OutcomePageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const generateStaticParams = async () =>
   outcomes.map((outcome) => ({ slug: outcome.slug }));
 
-export const generateMetadata = ({ params }: OutcomePageProps) => {
-  const outcome = getOutcomeBySlug(params.slug);
+export const generateMetadata = async ({ params }: OutcomePageProps) => {
+  const { slug } = await params;
+  const outcome = getOutcomeBySlug(slug);
 
   if (!outcome) {
     return { title: "Outcomes" };
@@ -26,14 +28,19 @@ export const generateMetadata = ({ params }: OutcomePageProps) => {
   };
 };
 
-export default function OutcomePage({ params }: OutcomePageProps) {
-  const outcome = getOutcomeBySlug(params.slug);
+export default async function OutcomePage({ params }: OutcomePageProps) {
+  const { slug } = await params;
+  const outcome = getOutcomeBySlug(slug);
 
   if (!outcome) {
     notFound();
   }
 
-  const insights = getInsightsByOutcome(params.slug);
+  const insights = getInsightsByOutcome(slug);
+  const [featured] = getAllInsights();
+  const relatedInsights =
+    insights.length > 0 ? insights : featured ? [featured] : [];
+  const usesPlaceholder = insights.length === 0;
   const relatedDecisions =
     outcome.relatedDecisions
       ?.map((slug) => getDecisionBySlug(slug))
@@ -111,13 +118,12 @@ export default function OutcomePage({ params }: OutcomePageProps) {
                 Related insights
               </h2>
               <div className="mt-4 grid gap-4">
-                {insights.length === 0 ? (
+                {relatedInsights.length === 0 ? (
                   <p className="text-base text-[color:var(--muted)]">
-                    No essays published for this outcome yet. We’ll add to this
-                    as patterns repeat.
+                    More essays coming.
                   </p>
                 ) : (
-                  insights.map((insight) => (
+                  relatedInsights.map((insight) => (
                     <Link
                       key={insight.slug}
                       href={`/insights/${insight.slug}`}
@@ -138,6 +144,11 @@ export default function OutcomePage({ params }: OutcomePageProps) {
                   ))
                 )}
               </div>
+              {usesPlaceholder && relatedInsights.length > 0 && (
+                <p className="mt-3 text-sm text-[color:var(--muted)]">
+                  More essays coming.
+                </p>
+              )}
             </div>
           </div>
         </div>

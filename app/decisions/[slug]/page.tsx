@@ -1,20 +1,22 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/format";
+import { getAllInsights } from "@/lib/insights";
 import { getOutcomeBySlug, type Outcome } from "@/lib/outcomes";
 import { decisions, getDecisionBySlug, getInsightsByDecision } from "@/lib/decisions";
 
 type DecisionPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const generateStaticParams = async () =>
   decisions.map((decision) => ({ slug: decision.slug }));
 
-export const generateMetadata = ({ params }: DecisionPageProps) => {
-  const decision = getDecisionBySlug(params.slug);
+export const generateMetadata = async ({ params }: DecisionPageProps) => {
+  const { slug } = await params;
+  const decision = getDecisionBySlug(slug);
 
   if (!decision) {
     return { title: "Decisions" };
@@ -26,14 +28,19 @@ export const generateMetadata = ({ params }: DecisionPageProps) => {
   };
 };
 
-export default function DecisionPage({ params }: DecisionPageProps) {
-  const decision = getDecisionBySlug(params.slug);
+export default async function DecisionPage({ params }: DecisionPageProps) {
+  const { slug } = await params;
+  const decision = getDecisionBySlug(slug);
 
   if (!decision) {
     notFound();
   }
 
-  const insights = getInsightsByDecision(params.slug);
+  const insights = getInsightsByDecision(slug);
+  const [featured] = getAllInsights();
+  const relatedInsights =
+    insights.length > 0 ? insights : featured ? [featured] : [];
+  const usesPlaceholder = insights.length === 0;
   const relatedOutcomes =
     decision.relatedOutcomes
       ?.map((slug) => getOutcomeBySlug(slug))
@@ -113,13 +120,12 @@ export default function DecisionPage({ params }: DecisionPageProps) {
                 Related insights
               </h2>
               <div className="mt-4 grid gap-4">
-                {insights.length === 0 ? (
+                {relatedInsights.length === 0 ? (
                   <p className="text-base text-[color:var(--muted)]">
-                    No essays published for this decision yet. We’ll add to this
-                    as patterns repeat.
+                    More essays coming.
                   </p>
                 ) : (
-                  insights.map((insight) => (
+                  relatedInsights.map((insight) => (
                     <Link
                       key={insight.slug}
                       href={`/insights/${insight.slug}`}
@@ -140,6 +146,11 @@ export default function DecisionPage({ params }: DecisionPageProps) {
                   ))
                 )}
               </div>
+              {usesPlaceholder && relatedInsights.length > 0 && (
+                <p className="mt-3 text-sm text-[color:var(--muted)]">
+                  More essays coming.
+                </p>
+              )}
             </div>
           </div>
         </div>
