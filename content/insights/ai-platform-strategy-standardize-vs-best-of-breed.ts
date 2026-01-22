@@ -22,7 +22,7 @@ const insight: Insight = {
   date: "2026-01-19",
   description:
     "AI platform decisions revive a familiar enterprise tradeoff: unify to scale or optimize for capability. The real risk is pretending it is a one-time decision.",
-  tags: ["AI Strategy", "Platform", "Enterprise Architecture"],
+  tags: ["AI Strategy", "Platform Strategy", "Enterprise Architecture"],
   cta: {
     text: "If you are navigating this now, happy to compare notes.",
     href: "/contact",

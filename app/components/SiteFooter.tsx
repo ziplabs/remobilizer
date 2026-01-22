@@ -20,8 +20,11 @@ export default function SiteFooter() {
             <Link href="/insights" className="hover:text-[color:var(--accent-olive)]">
               Insights
             </Link>
-            <Link href="/coverage" className="hover:text-[color:var(--accent-olive)]">
-              Coverage
+            <Link
+              href="/shaping-outcomes"
+              className="hover:text-[color:var(--accent-olive)]"
+            >
+              Shaping Outcomes
             </Link>
             <Link href="/about" className="hover:text-[color:var(--accent-olive)]">
               About

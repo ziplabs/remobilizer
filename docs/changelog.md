@@ -6,3 +6,9 @@
 - Built core site pages and Insight publishing model.
 - Authored the canonical Insight post on AI platform strategy.
 - Added documentation for continuity and publishing workflow.
+
+## 2026-01-21
+- Fixed canonical Insight routing and ensured slug consistency.
+- Replaced Coverage with Shaping Outcomes and added topic filtering.
+- Refined masthead, palette, and typographic hierarchy for editorial clarity.
+- Updated copy to keep scope flexible and measured.

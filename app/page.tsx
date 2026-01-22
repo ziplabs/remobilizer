@@ -12,7 +12,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div className="space-y-8">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent-olive)]">
-                Remobilizer Insights
+                Remobilizer
               </span>
               <h1 className="text-4xl font-semibold leading-tight text-[color:var(--accent-blue)] sm:text-6xl">
                 Decision-grade writing for leaders operating under real
@@ -21,9 +21,8 @@ export default function Home() {
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--muted)]">
               <p>
-                Remobilizer publishes essays on AI, enterprise software, and
-                security with an emphasis on how choices play out in real
-                organizations.
+                Essays on AI, enterprise software, and security for leaders
+                accountable to enterprise outcomes and the choices behind them.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -66,7 +65,7 @@ export default function Home() {
             </div>
             <Link
               href={`/insights/${featured.slug}`}
-              className="group block rounded-3xl border border-[color:var(--line)] bg-[color:var(--surface)] p-10 shadow-[0_22px_50px_-38px_rgba(11,35,64,0.4)] transition hover:-translate-y-1 hover:border-[color:var(--accent-blue)]"
+              className="group block rounded-3xl bg-[color:var(--surface)] p-10 shadow-[0_18px_40px_-28px_rgba(11,35,64,0.3)] transition hover:-translate-y-1 hover:shadow-[0_26px_55px_-32px_rgba(11,35,64,0.35)]"
             >
               <div className="flex flex-col gap-5">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
@@ -113,7 +112,7 @@ export default function Home() {
               </div>
               <div>
                 <a
-                  href="/coverage"
+                  href="/shaping-outcomes"
                   className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
                 >
                   See more
@@ -128,7 +127,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
           <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-              Recent lines of inquiry
+              Lines of inquiry
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
               Representative topics drawn from current enterprise realities.
@@ -169,7 +168,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.35)] transition hover:-translate-y-1 hover:border-[color:var(--accent-olive)]"
+                className="rounded-2xl bg-[color:var(--surface)] p-6 shadow-[0_12px_30px_-24px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_-26px_rgba(15,23,42,0.3)]"
               >
                 <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
                   {item.title}
