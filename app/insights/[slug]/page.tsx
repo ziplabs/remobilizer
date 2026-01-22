@@ -4,16 +4,17 @@ import { getAllInsights, getInsightBySlug } from "@/lib/insights";
 import { formatDate } from "@/lib/format";
 
 type InsightPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const generateStaticParams = async () =>
   getAllInsights().map((insight) => ({ slug: insight.slug }));
 
-export const generateMetadata = ({ params }: InsightPageProps) => {
-  const insight = getInsightBySlug(params.slug);
+export const generateMetadata = async ({ params }: InsightPageProps) => {
+  const { slug } = await params;
+  const insight = getInsightBySlug(slug);
 
   if (!insight) {
     return {
@@ -27,8 +28,9 @@ export const generateMetadata = ({ params }: InsightPageProps) => {
   };
 };
 
-export default function InsightPage({ params }: InsightPageProps) {
-  const insight = getInsightBySlug(params.slug);
+export default async function InsightPage({ params }: InsightPageProps) {
+  const { slug } = await params;
+  const insight = getInsightBySlug(slug);
 
   if (!insight) {
     notFound();
