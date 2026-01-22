@@ -53,7 +53,7 @@ export default function Home() {
                   Featured Insight
                 </h2>
                 <p className="mt-2 text-[color:var(--muted)]">
-                  The most recent essay, in full.
+                  What we’re thinking about right now.
                 </p>
               </div>
               <Link
@@ -130,7 +130,7 @@ export default function Home() {
               Lines of inquiry
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-              Representative topics drawn from current enterprise realities.
+              Patterns we’re tracking.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
