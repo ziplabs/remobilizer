@@ -17,14 +17,13 @@ export default function Home() {
                 Remobilizer
               </span>
               <h1 className="text-4xl font-semibold leading-tight text-[color:var(--accent-blue)] sm:text-6xl">
-                Decision-grade writing for leaders operating under real
-                constraints.
+                Decision-grade thinking for operating leaders.
               </h1>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--muted)]">
-              <p>
-                Essays on AI and enterprise software for leaders accountable
-                when platform choices fail.
+              <p className="max-w-2xl">
+                AI and enterprise platforms—examined through real execution
+                constraints and outcomes.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
