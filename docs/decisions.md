@@ -2,7 +2,8 @@
 
 ## Information Architecture
 - Public content type: Insights only.
-- Core pages: Home, Insights index, Insight detail, About, Contact.
+- Outcomes and Decisions are navigational lenses over Insights.
+- Core pages: Home, Insights index/detail, Outcomes index/detail, Decisions index/detail, About, Contact.
 - Simple navigation without dropdowns or heavy UI systems.
 
 ## Design Direction
@@ -11,6 +12,7 @@
 - Consistent hero sections across pages, smaller on internal pages.
 
 ## Content Model
-- Insight metadata: title, date, description, tags.
+- Insight metadata: title, date, description, tags, outcomes, decisions.
+- Outcomes and Decisions are lightweight lookup tables.
 - Insight content is stored as typed blocks in code for easy additions.
 - Static-first: no database or runtime services.

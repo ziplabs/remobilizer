@@ -9,6 +9,7 @@
 
 ## 2026-01-21
 - Fixed canonical Insight routing and ensured slug consistency.
-- Replaced Coverage with Shaping Outcomes and added topic filtering.
+- Replaced Shaping Outcomes with Outcomes/Decisions lenses over Insights.
+- Added outcomes/decisions lookup tables and filtering pages.
 - Refined masthead, palette, and typographic hierarchy for editorial clarity.
 - Updated copy to keep scope flexible and measured.

@@ -6,6 +6,7 @@ Remobilizer is an operator-grade thought-leadership publishing platform for seni
 - A calm, editorial destination for executive essays.
 - A place to surface real enterprise tradeoffs and failure patterns.
 - A platform that invites discussion rather than prescribing defaults.
+- A site where Outcomes and Decisions act as navigation lenses over Insights.
 
 ## What Remobilizer Is Not
 - A traditional analyst research product.

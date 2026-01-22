@@ -21,10 +21,13 @@ export default function SiteFooter() {
               Insights
             </Link>
             <Link
-              href="/shaping-outcomes"
+              href="/outcomes"
               className="hover:text-[color:var(--accent-olive)]"
             >
-              Shaping Outcomes
+              Outcomes
+            </Link>
+            <Link href="/decisions" className="hover:text-[color:var(--accent-olive)]">
+              Decisions
             </Link>
             <Link href="/about" className="hover:text-[color:var(--accent-olive)]">
               About

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAllInsights } from "@/lib/insights";
 import { formatDate } from "@/lib/format";
+import { outcomes } from "@/lib/outcomes";
+import { decisions } from "@/lib/decisions";
 
 export default function Home() {
   const [featured] = getAllInsights();
@@ -90,29 +92,37 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
               <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-                Shaping outcomes
+                Outcomes
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
-                Hard decisions, technology shifts, and execution realities that
-                shape enterprise outcomes across AI, enterprise software,
-                security, and operating models.
+                Outcomes represent what leaders are accountable for. Each lens
+                connects to Insights where those results are shaped.
               </p>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[color:var(--accent-charcoal)]">
               <p>
-                We focus on where strategy meets execution: platform choices,
-                governance decisions, and product bets that determine how
-                outcomes unfold.
+                Explore the outcomes that surface most often in enterprise AI
+                adoption, platform strategy, and governance decisions.
               </p>
-              <div className="grid gap-2 text-sm text-[color:var(--muted)]">
-                <span>Strategy ↔ execution</span>
-                <span>Risk, control, and ownership</span>
-                <span>Platform architecture and operating model</span>
-                <span>Product, GTM, and enterprise adoption dynamics</span>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {outcomes.slice(0, 4).map((outcome) => (
+                  <Link
+                    key={outcome.slug}
+                    href={`/outcomes/${outcome.slug}`}
+                    className="rounded-2xl bg-[color:var(--background)] p-5 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.22)] transition hover:-translate-y-1"
+                  >
+                    <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
+                      {outcome.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+                      {outcome.shortDescription}
+                    </p>
+                  </Link>
+                ))}
               </div>
               <div>
                 <a
-                  href="/shaping-outcomes"
+                  href="/outcomes"
                   className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
                 >
                   See more
@@ -127,57 +137,35 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
           <div className="mb-8 flex flex-col gap-3">
             <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-              Lines of inquiry
+              Decisions
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-              Patterns we’re tracking.
+              Recurring decision pressure points leaders keep navigating.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            {[
-              {
-                title: "AI vendor consolidation",
-                description:
-                  "How procurement leverage, platform velocity, and lock-in risk shape the choice.",
-              },
-              {
-                title: "Model risk governance",
-                description:
-                  "Accountability, lineage, and override paths that hold up under scrutiny.",
-              },
-              {
-                title: "Inference cost dynamics",
-                description:
-                  "Where spend accumulates and how leaders manage the curve.",
-              },
-              {
-                title: "Security review bottlenecks",
-                description:
-                  "Why AI delivery slows and how teams remove friction without exposure.",
-              },
-              {
-                title: "Data access vs. privacy",
-                description:
-                  "What shifts when policy meets product timelines and regulatory scrutiny.",
-              },
-              {
-                title: "M&A integration of AI stacks",
-                description:
-                  "Duplicated platforms, fractured governance, and the cost of drift.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
+            {decisions.slice(0, 6).map((decision) => (
+              <Link
+                key={decision.slug}
+                href={`/decisions/${decision.slug}`}
                 className="rounded-2xl bg-[color:var(--surface)] p-6 shadow-[0_12px_30px_-24px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_-26px_rgba(15,23,42,0.3)]"
               >
                 <h3 className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
-                  {item.title}
+                  {decision.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
-                  {item.description}
+                  {decision.shortDescription}
                 </p>
-              </div>
+              </Link>
             ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/decisions"
+              className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
+            >
+              See more
+            </Link>
           </div>
         </div>
       </section>

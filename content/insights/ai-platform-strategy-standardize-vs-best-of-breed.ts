@@ -9,6 +9,8 @@ export type Insight = {
   date: string;
   description: string;
   tags: string[];
+  outcomes: string[];
+  decisions: string[];
   cta?: {
     text: string;
     href: string;
@@ -23,6 +25,8 @@ const insight: Insight = {
   description:
     "AI platform decisions revive a familiar enterprise tradeoff: unify to scale or optimize for capability. The real risk is pretending it is a one-time decision.",
   tags: ["AI Strategy", "Platform Strategy", "Enterprise Architecture"],
+  outcomes: ["platform-resilience", "strategic-optionality"],
+  decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
   cta: {
     text: "If you are navigating this now, happy to compare notes.",
     href: "/contact",
