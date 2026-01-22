@@ -41,9 +41,9 @@ export default async function InsightPage({ params }: InsightPageProps) {
       ? {
           src: "/insights/standardize-best-of-breed-a.svg",
           altSrc: "/insights/standardize-best-of-breed-b.svg",
-          alt: "A tradeoff line showing standardize vs best-of-breed with governance and velocity forces.",
+          alt: "A tradeoff line showing standardize and best-of-breed with directional cues for governance and velocity and a center node labeled as ongoing tension.",
           caption:
-            "Standardization consolidates control; best-of-breed preserves velocity and modular capability.",
+            "Enterprises re-open this choice as constraints shift; the center is tension, not resolution.",
         }
       : null;
 
