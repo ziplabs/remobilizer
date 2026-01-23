@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllInsights, getInsightBySlug } from "@/lib/insights";
@@ -51,6 +52,18 @@ export default async function InsightPage({ params }: InsightPageProps) {
           <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">
             {insight.description}
           </p>
+          {insight.headerImage && (
+            <div className="mt-10">
+              <Image
+                src={insight.headerImage.src}
+                alt={insight.headerImage.alt}
+                width={insight.headerImage.width}
+                height={insight.headerImage.height}
+                className="h-auto w-full rounded-2xl border border-[color:var(--line)] bg-[color:var(--background)]"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 

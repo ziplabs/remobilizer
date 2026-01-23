@@ -11,6 +11,12 @@ export type Insight = {
   tags: string[];
   outcomes: string[];
   decisions: string[];
+  headerImage?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   cta?: {
     text: string;
     href: string;
@@ -27,6 +33,12 @@ const insight: Insight = {
   tags: ["AI Strategy", "Platform Strategy", "Enterprise Architecture"],
   outcomes: ["platform-resilience", "strategic-optionality"],
   decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
+  headerImage: {
+    src: "/insight-ai-platform-discussion-header.svg",
+    alt: "Operating leaders discussing around a table.",
+    width: 1200,
+    height: 600,
+  },
   cta: {
     text: "If you are navigating this now, happy to compare notes.",
     href: "/contact",
