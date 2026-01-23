@@ -34,8 +34,8 @@ const insight: Insight = {
   outcomes: ["platform-resilience", "strategic-optionality"],
   decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
   headerImage: {
-    src: "/insight-ai-platform-discussion-header.svg",
-    alt: "Operating leaders discussing around a table.",
+    src: "/insight-ai-platform-meeting-sketch.svg",
+    alt: "Leaders in a workplace meeting sketched in pen.",
     width: 1200,
     height: 600,
   },
