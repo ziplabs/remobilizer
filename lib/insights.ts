@@ -1,4 +1,4 @@
-import insight from "@/content/insights/ai-platform-strategy-standardize-vs-best-of-breed";
+import insight from "@/content/insights/standardize-vs-best-of-breed";
 
 export type Insight = typeof insight;
 

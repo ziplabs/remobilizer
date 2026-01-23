@@ -25,7 +25,7 @@ export type Insight = {
 };
 
 const insight: Insight = {
-  slug: "ai-platform-strategy-standardize-vs-best-of-breed",
+  slug: "standardize-vs-best-of-breed",
   title: "Standardize or Best-of-Breed? The AI Platform Choice Every Enterprise Re-litigates",
   date: "2026-01-19",
   description:
@@ -34,8 +34,8 @@ const insight: Insight = {
   outcomes: ["platform-resilience", "strategic-optionality"],
   decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
   headerImage: {
-    src: "/insight-ai-platform-meeting-sketch.svg",
-    alt: "Leaders in a workplace meeting sketched in pen.",
+    src: "/images/insights/standardize-vs-best-of-breed/header.png",
+    alt: "Leaders discussing at a whiteboard during a meeting.",
     width: 1200,
     height: 600,
   },
