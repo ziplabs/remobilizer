@@ -34,7 +34,7 @@ const insight: Insight = {
   outcomes: ["platform-resilience", "strategic-optionality"],
   decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
   headerImage: {
-    src: "/images/insights/standardize-vs-best-of-breed/header.png",
+    src: "/images/insights/standardize-vs-best-of-breed/header.jpg",
     alt: "Leaders discussing at a whiteboard during a meeting.",
     width: 1200,
     height: 600,
