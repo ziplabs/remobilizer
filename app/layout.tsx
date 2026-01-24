@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   description:
     "Essays on AI, enterprise software, and the decisions that shape outcomes.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/site/brand/R-logo.png",
+  },
 };
 
 export default function RootLayout({

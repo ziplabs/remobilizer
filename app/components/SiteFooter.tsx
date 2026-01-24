@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SiteFooter() {
@@ -6,9 +7,16 @@ export default function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
         <div className="grid gap-8 border-t border-[color:var(--line)] pt-10 md:grid-cols-[1.4fr_0.6fr]">
           <div className="space-y-4 text-sm text-[color:var(--muted)]">
-            <p className="text-base font-semibold text-[color:var(--accent-blue)]">
-              Remobilizer
-            </p>
+            <div className="flex items-center gap-3 text-base font-semibold text-[color:var(--accent-blue)]">
+              <Image
+                src="/images/site/brand/R-logo.png"
+                alt="Remobilizer logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <span>Remobilizer</span>
+            </div>
             <p>
               Essays on AI, enterprise software, and the decisions that shape
               outcomes. Written for leaders responsible for direction and
