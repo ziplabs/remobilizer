@@ -20,6 +20,7 @@ export type Insight = {
   cta?: {
     text: string;
     href: string;
+    label?: string;
   };
   blocks: InsightBlock[];
 };

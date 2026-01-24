@@ -17,6 +17,11 @@ export type Insight = {
     width: number;
     height: number;
   };
+  cta?: {
+    text: string;
+    href: string;
+    label?: string;
+  };
   blocks: InsightBlock[];
 };
 
