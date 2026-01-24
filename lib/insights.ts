@@ -1,8 +1,9 @@
-import insight from "@/content/insights/standardize-vs-best-of-breed";
+import standardizeVsBestOfBreed from "@/content/insights/standardize-vs-best-of-breed";
+import whyAiIsntFixingCoreChallenges from "@/content/insights/why-ai-isnt-fixing-core-challenges-enterprise-software";
 
-export type Insight = typeof insight;
+export type Insight = typeof standardizeVsBestOfBreed;
 
-const insights = [insight];
+const insights = [whyAiIsntFixingCoreChallenges, standardizeVsBestOfBreed];
 
 export const getAllInsights = () =>
   [...insights].sort(
