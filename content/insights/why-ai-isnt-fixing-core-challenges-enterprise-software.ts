@@ -33,6 +33,12 @@ const insight: Insight = {
   tags: ["Enterprise Software", "AI Strategy", "Operating Models"],
   outcomes: ["platform-resilience", "strategic-optionality", "cost-discipline"],
   decisions: ["standardize-vs-best-of-breed", "centralize-vs-federate"],
+  headerImage: {
+    src: "/images/insights/why-ai-isnt-fixing-core-challenges-enterprise-software/header.jpg",
+    alt: "Leaders discussing AI impacts in a workplace setting.",
+    width: 1200,
+    height: 600,
+  },
   blocks: [
     {
       type: "paragraph",
