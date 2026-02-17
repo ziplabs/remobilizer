@@ -11,6 +11,10 @@ export type Insight = {
   tags: string[];
   outcomes: string[];
   decisions: string[];
+  author_name: string;
+  author_role?: string;
+  author_url?: string;
+  is_guest?: boolean;
   headerImage?: {
     src: string;
     alt: string;
@@ -34,6 +38,9 @@ const insight: Insight = {
   tags: ["AI Strategy", "Platform Economics", "Operating Models"],
   outcomes: ["cost-discipline", "platform-resilience", "customer-trust"],
   decisions: ["security-gates", "vendor-consolidation"],
+  author_name: "Editor",
+  author_role: "Founder, Ziplabs",
+  is_guest: false,
   headerImage: {
     src: "/images/insights/agentic-usage-pricing/header.jpg",
     alt: "Operators reviewing agentic workflow usage data.",

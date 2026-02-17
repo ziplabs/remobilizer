@@ -42,9 +42,12 @@ export default async function InsightPage({ params }: InsightPageProps) {
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-3xl px-6 py-16">
           <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
-            <span>{formatDate(insight.date)}</span>
+            <span>
+              {insight.author_name}
+              {insight.author_role && ` · ${insight.author_role}`}
+            </span>
             <span className="h-1 w-1 rounded-full bg-[color:var(--accent-olive)]" />
-            <span>{insight.tags.join(" · ")}</span>
+            <span>{formatDate(insight.date)}</span>
           </div>
           <h1 className="mt-4 text-4xl font-semibold leading-tight text-[color:var(--accent-blue)] sm:text-5xl">
             {insight.title}

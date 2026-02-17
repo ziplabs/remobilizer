@@ -18,7 +18,7 @@ export default function InsightsPage() {
             Insights
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">
-            Essays on enterprise decisions under real constraints.
+            Decision-grade essays on AI and enterprise platforms under real constraints.
           </p>
         </div>
       </section>

@@ -11,6 +11,10 @@ export type Insight = {
   tags: string[];
   outcomes: string[];
   decisions: string[];
+  author_name: string;
+  author_role?: string;
+  author_url?: string;
+  is_guest?: boolean;
   headerImage?: {
     src: string;
     alt: string;
@@ -34,6 +38,9 @@ const insight: Insight = {
   tags: ["AI Strategy", "Platform Strategy", "Enterprise Architecture"],
   outcomes: ["platform-resilience", "strategic-optionality"],
   decisions: ["standardize-vs-best-of-breed", "vendor-consolidation"],
+  author_name: "Editor",
+  author_role: "Founder, Ziplabs",
+  is_guest: false,
   headerImage: {
     src: "/images/insights/standardize-vs-best-of-breed/header.jpg",
     alt: "Leaders discussing at a whiteboard during a meeting.",

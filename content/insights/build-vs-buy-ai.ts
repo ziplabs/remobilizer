@@ -11,6 +11,10 @@ export type Insight = {
   tags: string[];
   outcomes: string[];
   decisions: string[];
+  author_name: string;
+  author_role?: string;
+  author_url?: string;
+  is_guest?: boolean;
   headerImage?: {
     src: string;
     alt: string;
@@ -34,6 +38,9 @@ const insight: Insight = {
   tags: ["Build vs Buy", "AI Strategy", "Enterprise Platforms"],
   outcomes: ["strategic-optionality", "delivery-velocity", "platform-resilience"],
   decisions: ["build-vs-buy", "data-access-boundaries"],
+  author_name: "Editor",
+  author_role: "Founder, Ziplabs",
+  is_guest: false,
   headerImage: {
     src: "/images/insights/build-vs-buy-ai/header.jpg",
     alt: "Operators reviewing a build-versus-buy decision.",

@@ -11,6 +11,10 @@ export type Insight = {
   tags: string[];
   outcomes: string[];
   decisions: string[];
+  author_name: string;
+  author_role?: string;
+  author_url?: string;
+  is_guest?: boolean;
   headerImage?: {
     src: string;
     alt: string;
@@ -34,6 +38,9 @@ const insight: Insight = {
   tags: ["Enterprise Software", "AI Economics", "Monetization"],
   outcomes: ["cost-discipline", "strategic-optionality", "platform-resilience"],
   decisions: ["vendor-consolidation", "when-to-scale"],
+  author_name: "Editor",
+  author_role: "Founder, Ziplabs",
+  is_guest: false,
   headerImage: {
     src: "/images/insights/ai-revenue-growth/header.jpg",
     alt: "Operators reviewing enterprise software growth assumptions.",

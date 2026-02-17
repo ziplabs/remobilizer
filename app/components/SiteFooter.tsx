@@ -23,7 +23,9 @@ export default function SiteFooter() {
               execution.
             </p>
             <p className="text-xs">© {new Date().getFullYear()} Remobilizer</p>
-            <p className="text-xs text-[color:var(--muted)]">A Ziplabs project.</p>
+            <p className="text-xs text-[color:var(--muted)]">
+              Edited by Editor. A Ziplabs project.
+            </p>
           </div>
           <div className="flex flex-col gap-3 text-sm font-semibold text-[color:var(--accent-charcoal)]">
             <Link href="/insights" className="hover:text-[color:var(--accent-olive)]">
