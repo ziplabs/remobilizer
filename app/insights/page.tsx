@@ -18,31 +18,29 @@ export default function InsightsPage() {
             Insights
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">
-            Essays on enterprise decisions where clarity matters more than
-            consensus.
+            Essays on enterprise decisions under real constraints.
           </p>
         </div>
       </section>
 
       <section>
         <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:py-10">
-          <ul className="divide-y divide-[color:var(--line)]">
+          <div className="divide-y divide-[color:var(--line)]">
             {insights.map((insight) => (
-              <li key={insight.slug}>
-                <Link
-                  href={`/insights/${insight.slug}`}
-                  className="group flex flex-col gap-0.5 py-4 sm:flex-row sm:items-baseline sm:gap-4 sm:py-3"
-                >
-                  <span className="shrink-0 text-xs text-[color:var(--muted)] sm:w-24">
-                    {formatDate(insight.date)}
-                  </span>
-                  <span className="text-base font-medium text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)] sm:text-base">
-                    {insight.title}
-                  </span>
-                </Link>
-              </li>
+              <Link
+                key={insight.slug}
+                href={`/insights/${insight.slug}`}
+                className="group block border-[color:var(--line)] py-4 first:pt-0 last:pb-0"
+              >
+                <p className="text-xs text-[color:var(--muted)]">
+                  {formatDate(insight.date)}
+                </p>
+                <h2 className="mt-1 text-base font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
+                  {insight.title}
+                </h2>
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
     </div>

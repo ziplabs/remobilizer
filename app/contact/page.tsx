@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = {
   title: "Contact",
   description: "Contact Remobilizer with a brief note on what you are working through.",
@@ -14,15 +12,15 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[color:var(--muted)]">
-            Share the context you are working through. We respond to relevant
-            executive inquiries and specific decision situations.
+            For correspondence—or to share context in response to an
+            essay—send a note.
           </p>
         </div>
       </section>
 
       <section className="bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14">
-          <div className="grid gap-10 border-t border-[color:var(--line)] pt-10 md:grid-cols-[1.2fr_0.8fr]">
+          <div className="border-t border-[color:var(--line)] pt-10">
             <form
               action="mailto:contact@remobilizer.com"
               method="post"
@@ -92,14 +90,6 @@ export default function ContactPage() {
                 Submitting the form opens your email client to send the message.
               </p>
             </form>
-            <div className="flex flex-col gap-4 text-sm font-semibold text-[color:var(--accent-charcoal)]">
-              <Link href="/insights" className="hover:text-[color:var(--accent-blue)]">
-                Latest insights
-              </Link>
-              <Link href="/about" className="hover:text-[color:var(--accent-blue)]">
-                About Remobilizer
-              </Link>
-            </div>
           </div>
         </div>
       </section>

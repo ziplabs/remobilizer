@@ -36,10 +36,10 @@ export default function Home() {
                   Latest insights
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/about"
                   className="rounded-full border border-[color:var(--accent-olive)] px-6 py-3 text-sm font-semibold text-[color:var(--accent-olive)] transition hover:border-[color:var(--accent-blue)] hover:text-[color:var(--accent-blue)]"
                 >
-                  Contact
+                  About
                 </Link>
               </div>
             </div>
@@ -77,17 +77,9 @@ export default function Home() {
 
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
-          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-2xl font-semibold text-[color:var(--accent-blue)]">
-              Latest insights
-            </h2>
-            <Link
-              href="/insights"
-              className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
-            >
-              View all insights →
-            </Link>
-          </div>
+          <h2 className="mb-10 text-2xl font-semibold text-[color:var(--accent-blue)]">
+            Latest insights
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2">
             {latest.map((insight) => (
               <Link
