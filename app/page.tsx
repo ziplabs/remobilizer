@@ -2,8 +2,12 @@ import Link from "next/link";
 import { getAllInsights } from "@/lib/insights";
 import { formatDate } from "@/lib/format";
 
+const LATEST_COUNT = 6;
+
 export default function Home() {
-  const [featured] = getAllInsights();
+  const allInsights = getAllInsights();
+  const [featured, ...rest] = allInsights;
+  const latest = rest.slice(0, LATEST_COUNT);
 
   return (
     <div className="bg-[color:var(--background)]">
@@ -45,44 +49,71 @@ export default function Home() {
 
       {featured && (
         <section className="border-b border-[color:var(--line)] bg-[color:var(--background)]">
-          <div className="mx-auto w-full max-w-6xl px-6 py-24">
-            <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2 className="text-3xl font-semibold text-[color:var(--accent-blue)]">
-                  Featured Insight
-                </h2>
-                <p className="mt-2 text-[color:var(--muted)]">
-                  An essay shaping our current point of view.
-                </p>
-              </div>
-              <Link
-                href="/insights"
-                className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
-              >
-                See all
-              </Link>
-            </div>
+          <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-28">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-olive)]">
+              Featured
+            </span>
             <Link
               href={`/insights/${featured.slug}`}
-              className="group block rounded-3xl bg-[color:var(--surface)] p-10 shadow-[0_18px_40px_-28px_rgba(11,35,64,0.3)] transition hover:-translate-y-1 hover:shadow-[0_26px_55px_-32px_rgba(11,35,64,0.35)]"
+              className="group mt-4 block"
             >
-              <div className="flex flex-col gap-5">
-                <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
-                  <span>{formatDate(featured.date)}</span>
-                  <span className="h-1 w-1 rounded-full bg-[color:var(--accent-olive)]" />
-                  <span>{featured.tags.join(" · ")}</span>
-                </div>
-                <h3 className="text-3xl font-semibold leading-snug text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
-                  {featured.title}
-                </h3>
-                <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-                  {featured.description}
+              <div className="space-y-6">
+                <p className="text-sm text-[color:var(--muted)]">
+                  {formatDate(featured.date)}
                 </p>
+                <h2 className="text-3xl font-semibold leading-tight text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)] sm:text-4xl">
+                  {featured.title}
+                </h2>
+                {featured.description && (
+                  <p className="max-w-2xl text-lg leading-relaxed text-[color:var(--muted)]">
+                    {featured.description}
+                  </p>
+                )}
               </div>
             </Link>
           </div>
         </section>
       )}
+
+      <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
+        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <h2 className="text-2xl font-semibold text-[color:var(--accent-blue)]">
+              Latest insights
+            </h2>
+            <Link
+              href="/insights"
+              className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
+            >
+              View all insights →
+            </Link>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {latest.map((insight) => (
+              <Link
+                key={insight.slug}
+                href={`/insights/${insight.slug}`}
+                className="group block rounded-2xl bg-[color:var(--background)] p-6 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5"
+              >
+                <p className="text-xs text-[color:var(--muted)]">
+                  {formatDate(insight.date)}
+                </p>
+                <h3 className="mt-2 text-lg font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
+                  {insight.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Link
+              href="/insights"
+              className="text-sm font-semibold text-[color:var(--accent-charcoal)] hover:text-[color:var(--accent-blue)]"
+            >
+              View all insights →
+            </Link>
+          </div>
+        </div>
+      </section>
 
     </div>
   );

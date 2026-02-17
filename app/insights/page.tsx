@@ -13,11 +13,11 @@ export default function InsightsPage() {
   return (
     <div className="bg-[color:var(--background)]">
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
-          <h1 className="text-4xl font-semibold text-[color:var(--accent-blue)] sm:text-5xl">
+        <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:py-14">
+          <h1 className="text-3xl font-semibold text-[color:var(--accent-blue)] sm:text-4xl">
             Insights
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">
             Essays on enterprise decisions where clarity matters more than
             consensus.
           </p>
@@ -25,30 +25,24 @@ export default function InsightsPage() {
       </section>
 
       <section>
-        <div className="mx-auto w-full max-w-6xl px-6 py-16">
-          <div className="grid gap-6 md:grid-cols-2">
+        <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:py-10">
+          <ul className="divide-y divide-[color:var(--line)]">
             {insights.map((insight) => (
-              <Link
-                key={insight.slug}
-                href={`/insights/${insight.slug}`}
-                className="group block rounded-2xl bg-[color:var(--surface)] p-7 shadow-[0_12px_30px_-24px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_-26px_rgba(15,23,42,0.3)]"
-              >
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
-                    <span>{formatDate(insight.date)}</span>
-                    <span className="h-1 w-1 rounded-full bg-[color:var(--accent-olive)]" />
-                    <span>{insight.tags.join(" · ")}</span>
-                  </div>
-                  <h2 className="text-2xl font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
+              <li key={insight.slug}>
+                <Link
+                  href={`/insights/${insight.slug}`}
+                  className="group flex flex-col gap-0.5 py-4 sm:flex-row sm:items-baseline sm:gap-4 sm:py-3"
+                >
+                  <span className="shrink-0 text-xs text-[color:var(--muted)] sm:w-24">
+                    {formatDate(insight.date)}
+                  </span>
+                  <span className="text-base font-medium text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)] sm:text-base">
                     {insight.title}
-                  </h2>
-                  <p className="text-base leading-relaxed text-[color:var(--muted)]">
-                    {insight.description}
-                  </p>
-                </div>
-              </Link>
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
     </div>
