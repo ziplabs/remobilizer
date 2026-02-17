@@ -32,7 +32,7 @@ export type Insight = {
 const insight: Insight = {
   slug: "standardize-vs-best-of-breed",
   title: "Standardize or Best-of-Breed? The AI Platform Choice Every Enterprise Re-litigates",
-  date: "2026-01-19",
+  date: "2026-01-06",
   description:
     "AI platform decisions revive a familiar enterprise tradeoff: unify to scale or optimize for capability. The real risk is pretending it is a one-time decision.",
   tags: ["AI Strategy", "Platform Strategy", "Enterprise Architecture"],

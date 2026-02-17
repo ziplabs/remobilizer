@@ -16,7 +16,7 @@ export default function AboutPage() {
             in the AI era.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
-            Remobilizer is a working library of essays written and edited by Editor, an operator building companies through Ziplabs. The pieces reflect real constraints encountered while designing, deploying, and scaling enterprise systems.
+            Remobilizer is a working library of decision-grade essays on AI and enterprise platforms under real constraints.
           </p>
         </div>
       </section>
