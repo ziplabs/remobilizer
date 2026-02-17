@@ -24,20 +24,25 @@ export default function InsightsPage() {
       </section>
 
       <section>
-        <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:py-10">
-          <div className="divide-y divide-[color:var(--line)]">
+        <div className="mx-auto w-full max-w-6xl px-6 py-10 sm:py-12">
+          <div className="grid gap-6 md:grid-cols-2">
             {insights.map((insight) => (
               <Link
                 key={insight.slug}
                 href={`/insights/${insight.slug}`}
-                className="group block border-[color:var(--line)] py-4 first:pt-0 last:pb-0"
+                className="group block rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 transition hover:border-[color:var(--accent-charcoal)] hover:bg-[color:var(--background)]"
               >
                 <p className="text-xs text-[color:var(--muted)]">
                   {formatDate(insight.date)}
                 </p>
-                <h2 className="mt-1 text-base font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
+                <h2 className="mt-2 text-lg font-semibold leading-snug text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
                   {insight.title}
                 </h2>
+                {insight.description && (
+                  <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-[color:var(--muted)]">
+                    {insight.description}
+                  </p>
+                )}
               </Link>
             ))}
           </div>
