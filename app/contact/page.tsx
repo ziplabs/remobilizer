@@ -3,7 +3,14 @@ export const metadata = {
   description: "Contact Remobilizer with a brief note on what you are working through.",
 };
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{ sent?: string }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const sent = params?.sent === "1";
+
   return (
     <div className="bg-[color:var(--background)]">
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface)]">
@@ -21,12 +28,36 @@ export default function ContactPage() {
       <section className="bg-[color:var(--surface)]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14">
           <div className="border-t border-[color:var(--line)] pt-10">
+            {sent && (
+              <p className="mb-8 text-sm text-[color:var(--accent-charcoal)]">
+                Message sent.
+              </p>
+            )}
             <form
-              action="mailto:contact@remobilizer.com"
-              method="post"
-              encType="text/plain"
+              action="https://api.web3forms.com/submit"
+              method="POST"
               className="grid gap-5"
             >
+              <input
+                type="hidden"
+                name="access_key"
+                value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""}
+              />
+              <input type="hidden" name="subject" value="Remobilizer — Contact" />
+              <input type="hidden" name="from_name" value="Remobilizer" />
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://remobilizer.com/contact?sent=1"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                aria-hidden="true"
+              />
               <div className="grid gap-2">
                 <label className="text-sm font-semibold text-[color:var(--accent-charcoal)]">
                   Name
@@ -87,7 +118,7 @@ export default function ContactPage() {
                 Send message
               </button>
               <p className="text-xs text-[color:var(--muted)]">
-                Submitting the form opens your email client to send the message.
+                Messages are sent directly and reviewed periodically.
               </p>
             </form>
           </div>
