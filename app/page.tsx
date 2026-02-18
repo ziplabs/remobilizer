@@ -59,7 +59,7 @@ export default function Home() {
             >
               <div className="space-y-6">
                 <p className="text-sm text-[color:var(--muted)]">
-                  Operator Lens • {formatDate(featured.date)}
+                  {formatDate(featured.date)}
                 </p>
                 <h2 className="text-3xl font-semibold leading-tight text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)] sm:text-4xl">
                   {featured.title}
@@ -88,7 +88,7 @@ export default function Home() {
                 className="group block rounded-2xl bg-[color:var(--background)] p-6 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5"
               >
                 <p className="text-xs text-[color:var(--muted)]">
-                  Operator Lens • {formatDate(insight.date)}
+                  {formatDate(insight.date)}
                 </p>
                 <h3 className="mt-2 text-lg font-semibold text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
                   {insight.title}

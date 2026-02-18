@@ -33,7 +33,7 @@ export default function InsightsPage() {
                 className="group block rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 transition hover:border-[color:var(--accent-charcoal)] hover:bg-[color:var(--background)]"
               >
                 <p className="text-xs text-[color:var(--muted)]">
-                  Operator Lens • {formatDate(insight.date)}
+                  {formatDate(insight.date)}
                 </p>
                 <h2 className="mt-2 text-lg font-semibold leading-snug text-[color:var(--accent-charcoal)] group-hover:text-[color:var(--accent-blue)]">
                   {insight.title}
