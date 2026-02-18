@@ -32,7 +32,7 @@ export type Insight = {
 const insight: Insight = {
   slug: "why-ai-isnt-fixing-core-challenges-enterprise-software",
   title: "Why AI Isn’t Fixing the Core Challenges of Enterprise Software",
-  date: "2026-01-20",
+  date: "2025-12-29",
   description:
     "AI features are shipping fast across incumbent platforms, but the underlying architectural, economic, and organizational constraints remain. Operators still have to manage those realities.",
   tags: ["Enterprise Software", "AI Strategy", "Operating Models"],

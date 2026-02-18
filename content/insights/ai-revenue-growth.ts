@@ -32,7 +32,7 @@ export type Insight = {
 const insight: Insight = {
   slug: "ai-revenue-growth",
   title: "Why AI Isn’t Translating Into Revenue Growth for Enterprise Software Giants",
-  date: "2026-03-03",
+  date: "2026-02-09",
   description:
     "AI features are now table stakes across incumbent platforms, but operators should not assume that feature velocity will translate into faster revenue growth or margin expansion.",
   tags: ["Enterprise Software", "AI Economics", "Monetization"],

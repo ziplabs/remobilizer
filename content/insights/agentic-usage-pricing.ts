@@ -32,7 +32,7 @@ export type Insight = {
 const insight: Insight = {
   slug: "agentic-usage-pricing",
   title: "Why Agentic AI Increases Usage but Not Pricing Power in Enterprise Software",
-  date: "2026-02-03",
+  date: "2026-01-12",
   description:
     "Agentic AI deepens workflow dependency and improves UX, but does not automatically increase willingness-to-pay and can add governance overhead.",
   tags: ["AI Strategy", "Platform Economics", "Operating Models"],

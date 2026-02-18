@@ -4,11 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navItems = [{ label: "Insights", href: "/insights" }];
+const navItems = [
+  { label: "Insights", href: "/insights" },
+  { label: "About", href: "/about" },
+];
 
 export default function SiteHeader() {
   const pathname = usePathname();
   const isInsights = pathname === "/insights" || pathname?.startsWith("/insights/");
+  const isAbout = pathname === "/about";
 
   return (
     <header className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:var(--surface)]">
@@ -30,7 +34,9 @@ export default function SiteHeader() {
         </Link>
         <nav className="flex flex-wrap items-center gap-6 text-sm font-medium text-[color:var(--accent-charcoal)]">
           {navItems.map((item) => {
-            const isActive = item.href === "/insights" && isInsights;
+            const isActive =
+              (item.href === "/insights" && isInsights) ||
+              (item.href === "/about" && isAbout);
             return (
               <Link
                 key={item.href}

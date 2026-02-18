@@ -32,7 +32,7 @@ export type Insight = {
 const insight: Insight = {
   slug: "build-vs-buy-ai",
   title: "When Customers Can Build Instead of Buy: AI’s Quiet Threat to Enterprise Software",
-  date: "2026-02-17",
+  date: "2026-01-26",
   description:
     "AI lowers the barrier to internal tool-building, changing the build-buy calculus and quietly eroding expansion revenue at the edges of large platforms.",
   tags: ["Build vs Buy", "AI Strategy", "Enterprise Platforms"],
